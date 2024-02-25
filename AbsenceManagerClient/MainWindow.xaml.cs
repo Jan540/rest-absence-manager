@@ -162,7 +162,7 @@ namespace AbsenceManagerClient
                     collectionViewSource.Source = absences.OrderBy(a => a.From);
                 }
             }
-        }
+        }   
 
         // DO NOT TOUCH THIS METHOD
         private static DateTime ComputeStartTime()

@@ -54,7 +54,7 @@ namespace AbsenceManagerClient
 
         public static async Task<bool> PatchAbsenceAsync(int absenceId, bool isExcused)
         {
-            var content = new StringContent(JsonSerializer.Serialize(isExcused), Encoding.UTF8, "application/json");
+            var content = JsonContent.Create(isExcused);
 
             var res = await _httpClient.PatchAsync($"api/abscences/{absenceId}", content);
 
