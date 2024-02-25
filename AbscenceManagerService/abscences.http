@@ -1,0 +1,37 @@
+@BASE_ADDRESS = http://localhost:5279
+
+GET {{BASE_ADDRESS}}/api/students
+Accept: application/json
+
+###
+
+GET {{BASE_ADDRESS}}/api/students/2/abscences
+Accept: application/json
+
+###
+
+POST {{BASE_ADDRESS}}/api/students/2/abscences
+Accept: application/json
+Content-Type: application/json
+
+{
+    "from": "2022-02-28T10:55:00",
+    "to": "2147-04-28T11:31:00",
+    "reason": "Dharmann overdoses on water...",
+    "isExcused": false
+}
+
+###
+
+PATCH {{BASE_ADDRESS}}/api/abscences/66
+Accept: application/json
+Content-Type: application/json
+
+true
+
+###
+
+DELETE {{BASE_ADDRESS}}/api/abscences/65
+Accept: application/json
+
+###

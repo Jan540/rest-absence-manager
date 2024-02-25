@@ -1,0 +1,28 @@
+﻿// get all students
+GET  http://localhost:5016/api/students
+
+###
+// get student absences
+GET  http://localhost:5016/api/students/1/absences
+
+###
+// add absence to student
+POST  http://localhost:5016/api/students/1/absences
+Content-Type: application/json
+
+{
+  "from": "2024-02-26T16:17:00",
+  "to": "2024-02-26T19:29:00",
+  "reason": "Family reasons"
+}
+
+###
+// delete absence
+DELETE  http://localhost:5016/api/absences/65
+
+###
+// update absence
+PATCH  http://localhost:5016/api/absences/65
+Content-Type: application/json
+
+true
